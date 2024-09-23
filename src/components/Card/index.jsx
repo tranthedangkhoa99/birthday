@@ -1,11 +1,12 @@
 import './style.css'
+import card from "../../assets/card.jpg";
 
 const Card = () => {
   return (
     <div className="card">
       <div className="imgBox">
         <div className="bark" />
-        <img src="/src/assets/card.jpg" />
+        <img src={card} />
       </div>
       <div className="details">
         <h4 className="color1">Chúc Mừng Sinh Nhật</h4>

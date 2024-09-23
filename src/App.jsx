@@ -4,6 +4,7 @@ import ParticleImage, { forces, Vector } from "react-particle-image";
 import ReactHowler from "react-howler";
 import Card from "./components/Card";
 import Button from "./components/Button";
+import soundBirthday from "./assets/birthday-music.mp3";
 
 export default function App() {
   const [show, setShow] = useState(true);
@@ -22,7 +23,7 @@ export default function App() {
     <div style={{ height: "100vh" }}>
       <div className="custom-music">
         <ReactHowler
-          src="/src/assets/birthday-music.mp3"
+          src={soundBirthday}
           playing={true}
           loop={true}
           volume={0.5}
