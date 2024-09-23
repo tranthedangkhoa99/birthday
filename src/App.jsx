@@ -7,9 +7,16 @@ import Button from "./components/Button";
 
 export default function App() {
   const [show, setShow] = useState(true);
+  const [showBtn, setShowBtn] = useState(false);
 
   const src =
     "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/645px-Love_Heart_SVG.svg.png";
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowBtn(true);
+    }, 4000);
+  }, []);
 
   return (
     <div style={{ height: "100vh" }}>
@@ -24,7 +31,7 @@ export default function App() {
       </div>
       {show && (
         <>
-          <Button onClick={() => setShow(!show)} />
+          {showBtn && <Button onClick={() => setShow(false)} className="btn" />}
           <Spline scene="https://prod.spline.design/kQqZt3rwnIIUmjKR/scene.splinecode" />
         </>
       )}
