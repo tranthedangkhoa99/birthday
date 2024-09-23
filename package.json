@@ -1,29 +1,33 @@
 {
   "name": "birthday",
   "private": true,
+  "homepage": "https://tranthedangkhoa99.github.io/birthday/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@react-three/drei": "^9.112.0",
     "@react-three/fiber": "^8.17.7",
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.9.26",
+    "gh-pages": "^6.1.1",
+    "gsap": "3.7.0",
     "react": "^18.3.1",
+    "react-animated-text": "0.1.4",
     "react-dom": "^18.3.1",
     "react-howler": "^5.2.0",
-    "react-spring": "^9.7.4",
-    "three": "^0.168.0",
-    "gsap": "3.7.0",
-    "react-animated-text": "0.1.4",
     "react-particle-image": "1.0.1",
     "react-scripts": "3.0.1",
-    "styled-components": "5.3.0"
+    "react-spring": "^9.7.4",
+    "styled-components": "5.3.0",
+    "three": "^0.168.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
